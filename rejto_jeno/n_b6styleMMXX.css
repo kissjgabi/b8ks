@@ -81,7 +81,8 @@ body {
 .list h1 {
     position: fixed;
     top: 0;
-    width: calc(100% - 2vw);
+    left: 0;
+    width: 100%;
     padding: 1vh 1vw;
     border-bottom: 6px double black;
 }
@@ -107,13 +108,14 @@ body {
 }
 
 .list a.author:visited::before {
-    color: greenyellow;
+    color: green;
     content: "\2611";
 }
 
 .list a.back {
     position: fixed;
+    left: 0;
     bottom: 0;
-    width: calc(100% - 2vw);
+    width: 100%;
     border-top: 6px double black;
 }
