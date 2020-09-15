@@ -9,10 +9,10 @@ body {
     background-attachment: fixed;
     background-size: cover;
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-    overflow: hidden;
 }
 
 .wall {
+    position: fixed;
     height: 100vh;
     width: 100vw;
     background: transparent;
@@ -68,9 +68,13 @@ body {
 
 .list {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     margin: 1vh 1vw;
     width: 100%;
-    text-align: center;
+    height: 100%;
 }
 
 .author {
@@ -78,6 +82,26 @@ body {
     text-decoration: none;
 }
 
-a:focus {
-    -webkit-filter: invert(30%) brightness(80%) sepia(100%) contrast(110%) saturate(953%) hue-rotate(165deg);
+.author:nth-child(odd) {
+    padding: 1vh 1vw 1vh 2vw;
+}
+
+.author:nth-child(even) {
+    padding: 1vh 2vw 1vh 1vw;
+}
+
+.author:nth-child(3n) {
+    padding: 1vh 3vw 1vh 3vw;
+}
+
+.author:nth-child(5n) {
+    padding: 1vh 5vw 1vh 1vw;
+}
+
+.author:nth-child(7n) {
+    padding: 1vh 3vw 1vh 7vw;
+}
+
+.author:nth-child(11n) {
+    padding: 1vh 11vw 1vh 11vw;
 }
