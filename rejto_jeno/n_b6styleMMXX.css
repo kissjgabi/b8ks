@@ -78,31 +78,42 @@ body {
     height: 100%;
 }
 
-.author {
+.list h1 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1vh 1vw;
+    border-bottom: 6px double black;
+}
+
+.list a.author,
+.list a.back {
+    padding: 1vh 1vw;
     color: black;
     text-decoration: none;
 }
 
-.author:nth-child(odd) {
-    padding: 1vh 1vw 1vh 2vw;
+.list a.author {
+    width: 75%;
+    text-shadow: 0 0 5px burlywood;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 3px;
 }
 
-.author:nth-child(even) {
-    padding: 1vh 2vw 1vh 1vw;
+.list a.author::before {
+    color: red;
+    content: "\2610";
 }
 
-.author:nth-child(3n) {
-    padding: 1vh 3vw 1vh 3vw;
+.list a.author:visited::before {
+    color: greenyellow;
+    content: "\2611";
 }
 
-.author:nth-child(5n) {
-    padding: 1vh 5vw 1vh 1vw;
-}
-
-.author:nth-child(7n) {
-    padding: 1vh 3vw 1vh 7vw;
-}
-
-.author:nth-child(11n) {
-    padding: 1vh 11vw 1vh 11vw;
+.list a.back {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 6px double black;
 }
