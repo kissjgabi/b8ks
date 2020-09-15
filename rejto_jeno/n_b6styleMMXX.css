@@ -87,11 +87,13 @@ body {
     border-bottom: 6px double black;
 }
 
-.list a.author,
-.list a.back {
-    padding: 1vh 1vw;
+.list a.author {
+    margin: 1vh 1vw;
+    padding: 0.5vh 1vw;
     color: black;
+    background-color: aliceblue;
     text-decoration: none;
+    overflow: auto;
 }
 
 .list a.author {
@@ -117,5 +119,7 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
+    padding: 1vh 1vw;
+    text-decoration: none;
     border-top: 6px double black;
 }
