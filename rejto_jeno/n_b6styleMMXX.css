@@ -81,7 +81,7 @@ body {
 .list h1 {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: calc(100% - 2vw);
     padding: 1vh 1vw;
     border-bottom: 6px double black;
 }
@@ -114,6 +114,6 @@ body {
 .list a.back {
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: calc(100% - 2vw);
     border-top: 6px double black;
 }
