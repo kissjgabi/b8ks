@@ -110,7 +110,11 @@ h1 {
 }
 
 .list a.author:first-child {
-    margin-top: 10%;
+    margin-top: 33%;
+}
+
+.list a.author:last-child {
+    margin-bottom: 33%;
 }
 
 a.back {
