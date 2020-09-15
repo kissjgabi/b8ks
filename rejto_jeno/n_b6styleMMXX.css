@@ -93,7 +93,9 @@ body {
     color: black;
     background-color: aliceblue;
     text-decoration: none;
-    overflow: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .list a.author {
@@ -105,13 +107,13 @@ body {
 }
 
 .list a.author::before {
-    color: red;
     content: "\2610";
+    color: red;
 }
 
 .list a.author:visited::before {
-    color: green;
     content: "\2611";
+    color: green;
 }
 
 .list a.back {
