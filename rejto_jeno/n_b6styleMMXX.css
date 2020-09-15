@@ -112,7 +112,7 @@ body {
 }
 
 .list a.author:visited::before {
-    content: "\2611";
+    content: "\2713";
     color: green;
 }
 
