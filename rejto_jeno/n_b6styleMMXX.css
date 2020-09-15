@@ -89,9 +89,10 @@ body {
 
 .list a.author {
     margin: 1vh 1vw;
-    padding: 0.5vh 1vw;
-    color: black;
-    background-color: aliceblue;
+    padding: 1vh 1.5vw 0.5vh;
+    color: darkred;
+    background-color: lightgoldenrodyellow;
+    font-weight: 900;
     text-decoration: none;
     white-space: nowrap;
     overflow: hidden;
@@ -106,14 +107,10 @@ body {
     letter-spacing: 3px;
 }
 
-.list a.author::before {
-    content: "\2610";
-    color: red;
-}
-
-.list a.author:visited::before {
+.list a.author:visited {
     content: "\2713";
-    color: green;
+    color: lightseagreen;
+    background-color: aliceblue;
 }
 
 .list a.back {
