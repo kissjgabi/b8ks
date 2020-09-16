@@ -156,6 +156,32 @@
         </a>
     </div>
 
+    <a onclick="jumpToRandombook()" class="sprite">
+        <img src="b8k.png" class="play">
+    </a>
+    </a>
+
+    <script>
+        let mekRoot = "https://mek.oszk.hu/";
+
+        function randomDirMEK() {
+            first = Math.floor(Math.random() * 211); // 0-210
+            second = Math.floor(Math.random() * 100);
+            if (first == 0 && second == 0) {
+                second == 1;
+            }
+            let firstDir = (first * 100) + "";
+            firstDir = "00000".substring(firstDir.length) + firstDir + "/";
+            let secondDir = (first * 100 + second) + "";
+            secondDir = "00000".substring(secondDir.length) + secondDir + "/";
+            return mekRoot + firstDir + secondDir;
+        }
+
+        function jumpToRandombook() {
+            randomBook = randomDirMEK();
+            location.href = randomBook;
+        }
+    </script>
 </body>
 
 </html>
