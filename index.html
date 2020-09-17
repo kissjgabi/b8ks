@@ -150,19 +150,145 @@
         </div>
     </div>
 
-    <div class="list">
-        <a href="rejto_jeno/index.html" class="author">
-            Rejtő Jenő
+    <div class="sprite">
+        <a onclick="jumpToRandombook()">
+            <img src="b8k.png" class="play">
         </a>
     </div>
 
-    <a onclick="jumpToRandombook()" class="sprite">
-        <img src="b8k.png" class="play">
-    </a>
-    </a>
+    <div class="list">
+        <a class="author" onclick="jumpToAuthor('Arany János')">
+            Arany János
+        </a>
+        <a class="author" onclick="jumpToAuthor('Ady Endre')">
+            Ady Endre
+        </a>
+        <a class="author" onclick="jumpToAuthor('James Fenimore Cooper')">
+            Cooper, James Fenimore 
+        </a>
+        <a class="author" onclick="jumpToAuthor('Dickens')">
+            Dickens, Charles
+        </a>
+        <a class="author" onclick="jumpToAuthor('Arthur Conan Doyle')">
+            Doyle, Athur Conan
+        </a>
+        <a class="author" onclick="jumpToAuthor('Dumas')">
+            Dumas, Alexandre
+        </a>
+        <a class="author" onclick="jumpToAuthor('Fehér Klára')">
+            Fehér Klára
+        </a>
+        <a class="author" onclick="jumpToAuthor('Gárdonyi')">
+            Gárdonyi Géza
+        </a>
+        <a class="author" onclick="jumpToAuthor('Homérosz')">
+            Homérosz
+        </a>
+        <a class="author" onclick="jumpToAuthor('Victor Hugo')">
+            Hugo, Victor
+        </a>
+        <a class="author" onclick="jumpToAuthor('Jókai Mór')">
+            Jókai Mór
+        </a>
+        <a class="author" onclick="jumpToAuthor('József Attila&dc_title=költeménye')">
+            József Attila
+        </a>
+        <a class="author" onclick="jumpToAuthor('Karinthy Frigyes')">
+            Karinthy Frigyes
+        </a>
+        <a class="author" onclick="jumpToAuthor('Krúdy Gyula')">
+            Krúdy Gyula
+        </a>
+        <a class="author" onclick="jumpToAuthor('Lázár Ervin')">
+            Lázár Ervin
+        </a>
+        <a class="author" onclick="jumpToAuthor('Jack London')">
+            London, Jack
+        </a>
+        <a class="author" onclick="jumpToAuthor('Lőrincz L. László')">
+            Lőrincz L. László:
+        </a>
+        <a class="author" onclick="jumpToAuthor('Thomas Mann')">
+            Mann, Thomas
+        </a>
+        <a class="author" onclick="jumpToAuthor('Maupassant')">
+            Guy de Maupassant
+        </a>
+        <a class="author" onclick="jumpToAuthor('May')">
+            May, Karl
+        </a>
+        <a class="author" onclick="jumpToAuthor('Mikszáth')">
+            Mikszáth Kálmán
+        </a>
+        <a class="author" onclick="jumpToAuthor('Móricz')">
+            Móricz Zsigmond
+        </a>
+        <a class="author" onclick="jumpToAuthor('Németh László')">
+            Németh László
+        </a>
+        <a class="author" onclick="jumpToAuthor('Orwell')">
+            Orwell, George
+        </a>
+        <a class="author" onclick="jumpToAuthor('Passuth')">
+            Passuth László
+        </a>
+        <a class="author" onclick="jumpToAuthor('Petőfi')">
+            Petőfi Sándor
+        </a>
+        <a class="author" onclick="jumpToAuthor('Poe')">
+            Poe, Edgar Allan
+        </a>
+        <a class="author" onclick="jumpToAuthor('Puskin')">
+            Puskin, Alexander
+        </a>
+        <a class="author" onclick="jumpToAuthor('Radnóti Miklós')">
+            Radnóti Miklós
+        </a>
+        <a href="jeno_rejto/index.html" class="author">
+            Rejtő Jenő
+        </a>
+        <a class="author" onclick="jumpToAuthor('Walter Scott')">
+            Scott, Walter
+        </a>
+        <a class="author" onclick="jumpToAuthor('Sienkiewicz')">
+            Sienkiewicz, Henryk
+        </a>
+        <a class="author" onclick="jumpToAuthor('Stendhal')">
+            Stendhal (Marie-Henri Beyle)
+        </a>
+        <a class="author" onclick="jumpToAuthor('Stevenson')">
+            Stevenson, Robert Louis
+        </a>
+        <a class="author" onclick="jumpToAuthor('Szerb Antal')">
+            Szerb Antal
+        </a>
+        <a class="author" onclick="jumpToAuthor('Szophoklész')">
+            Szophoklész
+        </a>
+        <a class="author" onclick="jumpToAuthor('Tolsztoj')">
+            Tolsztoj, Lev
+        </a>
+        <a class="author" onclick="jumpToAuthor('Twain')">
+            Twain, Mark
+        </a>
+        <a class="author" onclick="jumpToAuthor('Verne')">
+            Verne, Jules
+        </a>
+        <a class="author" onclick="jumpToAuthor('Wells')">
+            Wells, Herbert George
+        </a>
+        <a class="author" onclick="jumpToAuthor('Weöres Sándor')">
+            Weöres Sándor
+        </a>
+        <a class="author" onclick="jumpToAuthor('Zelk Zoltán')">
+            Zelk Zoltán
+        </a>
+    </div>
 
     <script>
         let mekRoot = "https://mek.oszk.hu/";
+
+        let mekSearch = "https://mek.oszk.hu/kereses.mhtml?dc_creator="
 
         function randomDirMEK() {
             first = Math.floor(Math.random() * 211); // 0-210
@@ -180,6 +306,10 @@
         function jumpToRandombook() {
             randomBook = randomDirMEK();
             location.href = randomBook;
+        }
+
+        function jumpToAuthor(author) {
+            location.href = mekSearch + author;
         }
     </script>
 </body>
