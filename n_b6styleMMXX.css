@@ -136,6 +136,15 @@ body {
     height: auto;
 }
 
+.finder {
+    position: relative;
+    top: 2vmin;
+    left: 0;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
 a:focus {
     -webkit-filter: invert(30%) brightness(80%) sepia(100%) contrast(110%) saturate(953%) hue-rotate(165deg);
 }

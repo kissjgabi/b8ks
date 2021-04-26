@@ -164,7 +164,7 @@
             Ady Endre
         </a>
         <a class="author" onclick="jumpToAuthor('James Fenimore Cooper')">
-            Cooper, James Fenimore 
+            Cooper, James Fenimore
         </a>
         <a class="author" onclick="jumpToAuthor('Dickens')">
             Dickens, Charles
@@ -300,9 +300,25 @@
         <a href="https://drive.google.com/drive/folders/12CjssPFybSHrhqsP9SiUDfnzgfbws7Yd?usp=sharing" class="author">
             Electronics on G8gledrive
         </a>
+
+        <div class="finder">
+            <label for="find">Author:</label>
+            <input type="text" id="find" name="find">
+            <b style="color: white; background-color: black; cursor: pointer;"
+                onclick="findContent()">&nbsp;&#8629;&nbsp;</b>
+        </div>
+
     </div>
 
     <script>
+        var input = document.getElementById("find");
+        input.addEventListener("keyup", function (event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                findContent();
+            }
+        });
+
         let mekRoot = "https://mek.oszk.hu/";
 
         let mekSearch = "https://mek.oszk.hu/kereses.mhtml?dc_creator="
@@ -323,6 +339,11 @@
         function jumpToRandombook() {
             randomBook = randomDirMEK();
             location.href = randomBook;
+        }
+
+        function findContent() {
+            author = document.getElementById("find").value;
+            jumpToAuthor(author);
         }
 
         function jumpToAuthor(author) {
